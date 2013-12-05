@@ -91,6 +91,7 @@ class PhpBuiltinServer extends Extension
             proc_close($this->resource);
             throw new ExtensionException($this, 'Failed to start server.');
         }
+        sleep(1); // Wait until server starting
     }
 
     private function stopServer()
